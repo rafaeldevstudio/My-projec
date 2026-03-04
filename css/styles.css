@@ -1,0 +1,173 @@
+/* RESET GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif; /* Verifique se importou a Jost no HTML */
+
+}
+
+/* CORPO DA PÁGINA: Define o fundo cinza claro e centraliza o 
+   container principal (.content) horizontalmente. */
+
+
+body {
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTAINER PRINCIPAL: O card branco que envolve todo o conteúdo. 
+   Usa Flexbox vertical (column) para empilhar Header, Main e Footer. */
+
+
+.content {
+  background: #ffffff;
+ /* width: 600px;  <------- removido para um teste*/
+  max-width: 600px;
+  width: 95%;
+  padding: 40px;
+  margin: 20px;
+  border: 2px solid #bbb;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Espaço entre as seções principais */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* HEADER: Centraliza a foto de perfil, o nome (h1) e a descrição (p). */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* FOTO DE PERFIL: Cria o círculo e a borda ao redor da imagem. */
+
+header img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid #666;
+}
+
+/* TÍTULO (NOME): Estilização da fonte do seu nome. */
+
+header h1 {
+  margin-top: 15px;
+  font-family: "playfair Disply", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+}
+
+/* SUBTÍTULO: Estiliza a sua "bio" curta abaixo do nome. */
+
+header p {
+  margin-top: 4px;
+  color: #999;
+  text-align: center;
+  font-family:  "playfair Disply", serif;
+}
+
+/* SEÇÃO DE LINKS E REDES: Agrupa a lista de ícones e os botões principais. */
+
+.content_main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* LISTA DE REDES SOCIAIS (UL): Alinha os ícones horizontalmente e no centro. */
+
+.content_main ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  gap: 20px;
+}
+
+/* ÍCONES INDIVIDUAIS: Define o tamanho base dos ícones das redes sociais. */
+
+.content_main ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+/* EFEITO HOVER GERAL: Aumenta levemente o ícone ao passar o mouse. */
+
+.content_main ul li a:hover {
+  font-size: 30px;
+  transition: font-size 0.2s ease;
+}
+
+/* CORES ESPECÍFICAS NO HOVER: Identidade visual de cada rede social. */
+
+.link-github:hover { color: #666; }
+.link-linkedin:hover { color: #0077b5; }
+.link-instagram:hover { color: #e4405f; }
+.link-twitter:hover { color: #1da1f2; }
+.link-youtube:hover { color: #ff0000; }
+
+/* BOTÕES DE NAVEGAÇÃO (MAIN): Estiliza os links largos (Site, Portfolio, etc). */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* LINKS DO MAIN: Cria o retângulo com bordas arredondadas e ícones nas extremidades. */
+
+main a {
+  border: 2px solid #666;
+  border-radius: 12px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ícone na esquerda, texto no centro/espaçado, seta na direita */
+  text-decoration: none;
+  color: #333;
+}
+
+/* HOVER DOS BOTÕES: Muda a cor de fundo e da borda suavemente. */
+main a:hover {
+  background: #f0f0f0;
+  border: 2px solid #333;
+  transition: background-color 0.3s ease;
+}
+
+/* FOOTER (NEWSLETTER): O banner escuro no rodapé para captura de e-mail. */
+footer {
+  background-color: #333;
+  color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 12px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+footer:hover {
+  background-color: #111;
+  transition: background-color 0.2s ease;
+}
+
+/* ÍCONE DE ENVELOPE NO FOOTER */
+
+footer i {
+  padding: 0 20px;
+  font-size: 24px;
+}
+
+/* TEXTOS DO NEWSLETTER */
+
+footer h2 { font-size: 18px; }
+footer span { font-size: 14px; }
